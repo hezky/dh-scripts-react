@@ -1,0 +1,29 @@
+{
+  "author": "David Hezky",
+  "bin": {
+    "dh-startWeb": "bin/dh-startWeb.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "detect-port": "^1.3.0",
+    "dh-dependency-base": "^0.0.13",
+    "dh-scripts-run": "^0.0.18",
+    "prompt": "^1.0.0",
+    "stdio": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^4.0.0"
+  },
+  "description": "package startWeb scripts",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "name": "dh-scripts-startWeb",
+  "scripts": {
+    "build": "dh-run build",
+    "eslint": "dh-run eslint",
+    "startWeb": "./bin/dh-startWeb.js startWeb"
+  },
+  "version": "0.0.1"
+}
