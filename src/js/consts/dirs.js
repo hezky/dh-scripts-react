@@ -1,10 +1,9 @@
-const DIR_LIB = "lib/js/";
-const DIR_SRC = "src/js/";
-const DIR_TEST = "test/";
+import DIRS from "dh-scripts-run/consts/dirs";
 
-const CWD = process.cwd();
-const CWD_LIB = `${CWD}/${DIR_LIB}`;
-const CWD_SRC = `${CWD}/${DIR_SRC}`;
-const CWD_TEST = `${CWD}/${DIR_TEST}`;
+const PROJECT_NAME = "dh-scripts-web";
 
-export { CWD_LIB, CWD_SRC, CWD_TEST, DIR_LIB, DIR_SRC, DIR_TEST };
+const STATIC_DIR = `${DIRS.CWD_NODE_MODULES}/${PROJECT_NAME}/static`;
+const STATIC_INDEX_HTML = `${STATIC_DIR}/index.html`;
+
+export * from "dh-scripts-run/consts/dirs";
+export { STATIC_DIR, STATIC_INDEX_HTML };

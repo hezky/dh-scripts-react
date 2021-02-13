@@ -1,6 +1,6 @@
-import { run } from "scripts/startWeb.js";
+import { run } from "scripts/web";
 
 const lastScriptsRun = process.env.DH_SCRIPTS_RUN;
-process.env.DH_SCRIPTS_RUN = "START_WEB";
+process.env.DH_SCRIPTS_RUN = "WEB";
 run();
 process.env.DH_SCRIPTS_RUN = lastScriptsRun;

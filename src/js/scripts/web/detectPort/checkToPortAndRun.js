@@ -3,12 +3,12 @@ import detectPort from "detect-port";
 import notfoundPort from "./notfoundPort";
 import runWithPort from "./runWithPort";
 
-const checkToPortAndRun = (portToCheck) => {
+const checkToPortAndRun = (portToCheck, runFce) => {
   portToCheck = portToCheck * 1;
   detectPort(portToCheck).then((port) => {
     try {
       if (port === portToCheck) {
-        runWithPort(port);
+        runWithPort(port, runFce);
       } else {
         notfoundPort(portToCheck, port);
       }

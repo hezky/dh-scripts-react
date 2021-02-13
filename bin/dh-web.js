@@ -4,7 +4,9 @@ const spawnSync = require("child_process").spawnSync;
 const script = process.argv[2];
 const args = process.argv.slice(3);
 
-const isScriptsRun = process.env.npm_package_name === "dh-scripts-startWeb";
+//console.log("PROCESS >> ", process);
+
+const isScriptsRun = process.env.npm_package_name === "dh-scripts-web";
 const apl = (isScriptsRun && "babel-node") || "node";
 const folder = (isScriptsRun && "src") || "lib";
 const pathScript = `./../${folder}/js/run/${script}.js`;
