@@ -5,8 +5,8 @@
   },
   "dependencies": {
     "detect-port": "^1.3.0",
-    "dh-dependency-base": "^0.0.31",
-    "dh-scripts-run": "^0.1.3",
+    "dh-dependency-base": "^0.0.33",
+    "dh-scripts-run": "^0.1.5",
     "express": "^4.17.1",
     "chalk": "^4.1.0",
     "prompt": "^1.1.0",
