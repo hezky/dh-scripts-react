@@ -1,4 +1,4 @@
-import DIRS from "dh-scripts-run/consts/dirs";
+import DIRS from "dh-scripts-run/js/consts/dirs";
 
 const PROJECT_NAME = "dh-scripts-web";
 
