@@ -1,9 +1,12 @@
-import DIRS from "dh-scripts-run/js/consts/dirs";
+import { utilsPackageJson } from "dh-scripts-base";
+import { CWD } from "dh-scripts-base/lib/js/consts/dirs";
 
-const PROJECT_NAME = "dh-scripts-web";
+const DIR_NODE_MODULES = "node_modules";
 
-const STATIC_DIR = `${DIRS.CWD_NODE_MODULES}/${PROJECT_NAME}/static`;
+const CWD_NODE_MODULES = `${CWD}/${DIR_NODE_MODULES}`;
+
+const STATIC_DIR = `${CWD_NODE_MODULES}/${utilsPackageJson.name}/static`;
 const STATIC_INDEX_HTML = `${STATIC_DIR}/index.html`;
 
-export * from "dh-scripts-run/js/consts/dirs";
+export * from "dh-scripts-run/lib/js/consts/dirs";
 export { STATIC_DIR, STATIC_INDEX_HTML };
