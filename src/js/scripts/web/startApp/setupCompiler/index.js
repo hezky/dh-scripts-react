@@ -1,6 +1,6 @@
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
-import webpackHotMiddleware from "webpack-hot-middleware";
+// import webpackHotMiddleware from "webpack-hot-middleware";
 
 import { CWD_NM_CONFIG_WEBPACK_DEVELOPMENT_MOD } from "consts/dirs";
 import { logProc } from "utils/log";
@@ -16,7 +16,7 @@ const setupCompiler = (app) => {
       publicPath: webpackConfig.output.publicPath,
     })
   );
-  app.use(webpackHotMiddleware(compiler));
+  // app.use(webpackHotMiddleware(compiler));
 };
 
 export default setupCompiler;

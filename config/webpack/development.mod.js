@@ -3,7 +3,7 @@ var webpack = require("webpack");
 
 var pwd = process.cwd();
 
-console.log("jsem zde ...");
+console.log("config development ...");
 
 module.exports = {
   devtool: "inline-source-map",
@@ -13,6 +13,24 @@ module.exports = {
     path.join(pwd, "devel/app.js"),
   ],
   mode: "development",
+  module: {
+    rules: [
+      {
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+              plugins: ["@babel/plugin-transform-runtime"],
+            },
+          },
+        ],
+        exclude: /node_modules/,
+        include: [path.join(pwd, "./devel/")],
+        test: /\.(j|t)s(x)?$/,
+      },
+    ],
+  },
   output: {
     path: path.join(pwd, "dist"),
     filename: "app.js",
