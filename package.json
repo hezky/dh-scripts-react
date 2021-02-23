@@ -30,6 +30,7 @@
   "description": "package web scripts",
   "files": [
     "bin",
+    "config",
     "lib",
     "static"
   ],
