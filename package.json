@@ -39,5 +39,5 @@
     "eslint": "dh-run eslint",
     "prepublishOnly": "dh-run prepublishOnly"
   },
-  "version": "0.0.8"
+  "version": "0.0.9"
 }
