@@ -4,6 +4,8 @@
     "dh-web": "bin/dh-web.js"
   },
   "dependencies": {
+    "@hot-loader/react-dom": "^17.0.1",
+    "core-js": "^3.9.0",
     "detect-port": "^1.3.0",
     "dh-dependency-base": "^0.0.33",
     "dh-scripts-base": "^0.0.4",
@@ -11,7 +13,14 @@
     "express": "^4.17.1",
     "chalk": "^4.1.0",
     "prompt": "^1.1.0",
-    "stdio": "^2.1.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-error-overlay": "^6.0.9",
+    "regenerator-runtime": "^0.13.7",
+    "stdio": "^2.1.1",
+    "webpack": "^5.23.0",
+    "webpack-dev-middleware": "^4.1.0",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.1.0"
@@ -25,6 +34,7 @@
   "name": "dh-scripts-web",
   "scripts": {
     "build": "dh-run build",
+    "clean": "dh-run clean",
     "eslint": "dh-run eslint",
     "prepublishOnly": "dh-run prepublishOnly"
   },

@@ -1,10 +1,10 @@
-import { STATIC_INDEX_HTML } from "consts/dirs";
+import { CWD_NM_STATIC_INDEX } from "consts/dirs";
 import { logProc } from "utils/log";
 
 const setupApp = (app) => {
   logProc("setup app");
   app.get("*", (req, res) => {
-    res.sendFile(STATIC_INDEX_HTML);
+    res.sendFile(CWD_NM_STATIC_INDEX);
   });
 };
 

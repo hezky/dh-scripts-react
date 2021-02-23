@@ -7,7 +7,7 @@ import startApp from "./startApp";
 
 const server = (port) => {
   const app = express();
-  setupCompiler();
+  setupCompiler(app);
   setupRequests();
   setupApp(app);
   startApp(app, port);
