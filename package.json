@@ -1,7 +1,7 @@
 {
   "author": "David Hezky",
   "bin": {
-    "dh-web": "bin/dh-web.js"
+    "dh-react": "bin/dh-react.js"
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.17",
@@ -28,7 +28,7 @@
     "webpack-dev-middleware": "^4.1.0",
     "webpack-hot-middleware": "^2.25.0"
   },
-  "description": "package web scripts",
+  "description": "package react scripts",
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.1.0"
   },
