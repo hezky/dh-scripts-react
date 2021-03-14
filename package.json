@@ -4,14 +4,16 @@
     "dh-web": "bin/dh-web.js"
   },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.13.5",
+    "@babel/plugin-transform-react-jsx": "^7.12.17",
+    "@babel/plugin-transform-runtime": "^7.13.7",
     "@hot-loader/react-dom": "^17.0.1",
     "babel-loader": "^8.2.2",
     "core-js": "^3.9.0",
     "detect-port": "^1.3.0",
-    "dh-dependency-base": "^0.0.33",
+    "dh-dependency-base": "^0.0.36",
+    "dh-dependency-web": "^0.0.5",
     "dh-scripts-base": "^0.0.4",
-    "dh-scripts-run": "^0.1.6",
+    "dh-scripts-run": "^0.1.11",
     "express": "^4.17.1",
     "chalk": "^4.1.0",
     "prompt": "^1.1.0",
@@ -22,7 +24,7 @@
     "react-pure-component": "^0.1.0",
     "regenerator-runtime": "^0.13.7",
     "stdio": "^2.1.1",
-    "webpack": "^5.23.0",
+    "webpack": "^5.24.2",
     "webpack-dev-middleware": "^4.1.0",
     "webpack-hot-middleware": "^2.25.0"
   },
