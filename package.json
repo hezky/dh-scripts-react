@@ -38,7 +38,7 @@
     "lib",
     "static"
   ],
-  "name": "dh-scripts-web",
+  "name": "@dh-js/scripts-web",
   "scripts": {
     "build": "dh-run build",
     "clean": "dh-run clean",
