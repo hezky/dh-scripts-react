@@ -1,4 +1,4 @@
 {
-  "extends": "./node_modules/dh-dependency-web/config/.babelrc",
+  "extends": "./node_modules/@dh-js/dependency-react/config/.babelrc",
   "plugins": [[ "module-resolver", { "root": ["./src/js"] } ]]
 }
