@@ -9,7 +9,7 @@
     "@dh-js/dependency-base": "^0.0.46",
     "@dh-js/dependency-react": "^0.0.11",
     "@dh-js/scripts-run": "^0.1.32",
-    "@dh-js/utils-scripts": "^0.0.8",
+    "@dh-js/scripts-base": "^0.0.8",
     "@hot-loader/react-dom": "^17.0.1",
     "babel-loader": "^8.2.2",
     "core-js": "^3.10.1",
