@@ -10,7 +10,7 @@ module.exports = {
   entry: [
     "webpack-hot-middleware/client",
     require.resolve("react-error-overlay"),
-    path.join(pwd, "devel/app.js"),
+    path.join(pwd, "devel/app.jsx"),
   ],
   mode: "development",
   module: {
@@ -40,7 +40,6 @@ module.exports = {
     publicPath: "/static/",
   },
   plugins: [
-    // new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ],

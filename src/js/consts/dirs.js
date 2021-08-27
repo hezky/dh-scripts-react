@@ -1,36 +1,45 @@
-import { CWD } from "dh-scripts-base/lib/js/consts/dirs";
+const ACTUAL_PCKG_NAME = "dh-scripts-react";
+const CWD = process.cwd();
 
-const ACTUAL_PCKG_NAME = "dh-scripts-web";
-const DIR_NODE_MODULES = "node_modules";
+const isScriptsRun = process.env.npm_package_name === "@dh-scripts/react";
 
+// -----------------------------------------------------------------------------
+// webpack
 const FILE_WEBPACK_DEVELOPMENT_APP = "development.app.js";
 const FILE_WEBPACK_DEVELOPMENT_MOD = "development.mod.js";
 const FILE_WEBPACK_PRODUCTION = "production";
+const DIR_CONFIG_WEBPACK = "config/webpack";
 
-// {cwd}/node_modules === CWD_NM
-const CWD_NODE_MODULES = `${CWD}/${DIR_NODE_MODULES}`;
+let WEBPACK_CONFIG;
+if (isScriptsRun) {
+  WEBPACK_CONFIG = `${CWD}/${DIR_CONFIG_WEBPACK}`;
+} else {
+  // {cwd}/node_modules/{actualPckg}/
+  WEBPACK_CONFIG = `${CWD}/node_modules/${ACTUAL_PCKG_NAME}/${DIR_CONFIG_WEBPACK}`;
+}
 
-// {cwd}/node_modules/{actualPckg} === CWD_NM_ACTUAL
-const CWD_NM_ACTUAL = `${CWD_NODE_MODULES}/${ACTUAL_PCKG_NAME}`;
+const WEBPACK_CONFIG_DEVELOPMENT_APP = `${WEBPACK_CONFIG}/${FILE_WEBPACK_DEVELOPMENT_APP}`;
+const WEBPACK_CONFIG_DEVELOPMENT_MOD = `${WEBPACK_CONFIG}/${FILE_WEBPACK_DEVELOPMENT_MOD}`;
+const WEBPACK_CONFIG_PRODUCTION = `${WEBPACK_CONFIG}/${FILE_WEBPACK_PRODUCTION}`;
+// -----------------------------------------------------------------------------
 
-// {cwd}/node_modules/{actualPckg}/config/webpack === CWD_NM_CONFIG_WEBPACK
-const CWD_NM_CONFIG_WEBPACK = `${CWD_NM_ACTUAL}/config/webpack`;
-// {cwd}/node_modules/{actualPckg}/config/webpack/development.app.js === CWD_NM_CONFIG_WEBPACK_DEVELOPMENT_APP
-const CWD_NM_CONFIG_WEBPACK_DEVELOPMENT_APP = `${CWD_NM_CONFIG_WEBPACK}/${FILE_WEBPACK_DEVELOPMENT_APP}`;
-// {cwd}/node_modules/{actualPckg}/config/webpack/development.mod.js === CWD_NM_CONFIG_WEBPACK_DEVELOPMENT_MOD
-const CWD_NM_CONFIG_WEBPACK_DEVELOPMENT_MOD = `${CWD_NM_CONFIG_WEBPACK}/${FILE_WEBPACK_DEVELOPMENT_MOD}`;
-// {cwd}/node_modules/{actualPckg}/config/webpack/production === CWD_NM_CONFIG_WEBPACK_PRODUCTION
-const CWD_NM_CONFIG_WEBPACK_PRODUCTION = `${CWD_NM_CONFIG_WEBPACK}/${FILE_WEBPACK_PRODUCTION}`;
+// -----------------------------------------------------------------------------
+// static
+const DIR_STATIC = "static";
+let STATIC_INDEX;
+if (isScriptsRun) {
+  // {cwd}/static/index.html
+  STATIC_INDEX = `${CWD}/${DIR_STATIC}/index.html`;
+} else {
+  // {cwd}/node_modules/{actualPckg}/static/index.html ===
+  STATIC_INDEX = `${CWD}/node_modules/${ACTUAL_PCKG_NAME}/${DIR_STATIC}/index.html`;
+}
+// -----------------------------------------------------------------------------
 
-// {cwd}/node_modules/{actualPckg}/static === CWD_NM_STATIC
-const CWD_NM_STATIC = `${CWD_NM_ACTUAL}/static`;
-// {cwd}/node_modules/{actualPckg}/static/index.html ===
-const CWD_NM_STATIC_INDEX = `${CWD_NM_STATIC}/index.html`;
-
-export * from "dh-scripts-run/lib/js/consts/dirs";
+export * from "@dh-scripts/run/lib/js/consts/dirs";
 export {
-  CWD_NM_CONFIG_WEBPACK_DEVELOPMENT_APP,
-  CWD_NM_CONFIG_WEBPACK_DEVELOPMENT_MOD,
-  CWD_NM_CONFIG_WEBPACK_PRODUCTION,
-  CWD_NM_STATIC_INDEX,
+  WEBPACK_CONFIG_DEVELOPMENT_APP,
+  WEBPACK_CONFIG_DEVELOPMENT_MOD,
+  WEBPACK_CONFIG_PRODUCTION,
+  STATIC_INDEX,
 };

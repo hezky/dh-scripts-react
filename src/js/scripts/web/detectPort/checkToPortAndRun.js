@@ -10,7 +10,7 @@ const checkToPortAndRun = (portToCheck, runFce) => {
       if (port === portToCheck) {
         runWithPort(port, runFce);
       } else {
-        notfoundPort(portToCheck, port);
+        notfoundPort(portToCheck, port, runFce);
       }
     } catch (e) {
       console.error(e);

@@ -1,1 +1,1 @@
-export * from "@dh-js/utils-script/lib/js/utils/log";
+export * from "@dh-scripts/run/lib/js/utils/log";

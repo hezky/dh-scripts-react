@@ -20,7 +20,7 @@ const START_WITH_OTHER_PORT__PROMPT_PORT_SCHEMA = (port) => ({
   },
 });
 
-const notfoundPort = (oldPort, newPort) => {
+const notfoundPort = (oldPort, newPort, runFce) => {
   clearDisplay();
   const question = QUESTION(oldPort);
   console.log(question);
@@ -29,7 +29,7 @@ const notfoundPort = (oldPort, newPort) => {
   prompt.get(schema, (err, result) => {
     err && console.error(err);
     console.log("... ", result);
-    checkToPortAndRun(result.port);
+    checkToPortAndRun(result.port, runFce);
   });
 };
 

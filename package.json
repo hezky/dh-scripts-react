@@ -4,25 +4,25 @@
     "dh-react": "bin/dh-react.js"
   },
   "dependencies": {
-    "@dh-dependency/base": "^0.0.55",
-    "@dh-dependency/react": "^0.0.16",
-    "@dh-scripts/run": "^0.2.4",
+    "@dh-dependency/base": "^0.0.56",
+    "@dh-dependency/react": "^0.0.18",
     "@dh-scripts/base": "^0.0.12",
-    "@hot-loader/react-dom": "^17.0.1",
+    "@dh-scripts/run": "^0.2.4",
+    "@hot-loader/react-dom": "17.0.1",
     "babel-loader": "^8.2.2",
-    "core-js": "^3.16.1",
+    "chalk": "^4.1.2",
+    "core-js": "^3.16.3",
     "detect-port": "^1.3.0",
     "express": "^4.17.1",
-    "chalk": "^4.1.2",
-    "prompt": "^1.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "prompt": "^1.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-error-overlay": "^6.0.9",
     "react-hot-loader": "^4.13.0",
     "react-pure-component": "^0.1.0",
     "regenerator-runtime": "^0.13.9",
     "stdio": "^2.1.1",
-    "webpack": "^5.50.0",
+    "webpack": "^5.51.1",
     "webpack-dev-middleware": "^5.0.0",
     "webpack-hot-middleware": "^2.25.0"
   },
@@ -41,7 +41,8 @@
     "build": "dh-run build",
     "clean": "dh-run clean",
     "eslint": "dh-run eslint",
-    "prepublishOnly": "dh-run prepublishOnly"
+    "prepublishOnly": "dh-run prepublishOnly",
+    "web": "./bin/dh-react.js web"
   },
   "version": "0.0.25"
 }
