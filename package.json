@@ -40,9 +40,9 @@
   "scripts": {
     "build": "dh-run build",
     "clean": "dh-run clean",
+    "devel": "./bin/dh-react.js devel",
     "eslint": "dh-run eslint",
-    "prepublishOnly": "dh-run prepublishOnly",
-    "web": "./bin/dh-react.js web"
+    "prepublishOnly": "dh-run prepublishOnly"
   },
   "version": "0.0.26"
 }

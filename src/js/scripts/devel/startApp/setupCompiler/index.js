@@ -5,8 +5,6 @@ import webpackHotMiddleware from "webpack-hot-middleware";
 import { WEBPACK_CONFIG_DEVELOPMENT_MOD } from "consts/dirs";
 import { logProc } from "utils/log";
 
-import compilerError from "./compilerError";
-
 const setupCompiler = (app) => {
   logProc("setup compiler");
   const webpackConfig = require(WEBPACK_CONFIG_DEVELOPMENT_MOD);

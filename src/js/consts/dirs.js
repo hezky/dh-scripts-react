@@ -1,7 +1,7 @@
-const ACTUAL_PCKG_NAME = "dh-scripts-react";
+const ACTUAL_PCKG_NAME = "@dh-scripts/react";
 const CWD = process.cwd();
 
-const isScriptsRun = process.env.npm_package_name === "@dh-scripts/react";
+const isScriptsRun = process.env.npm_package_name === ACTUAL_PCKG_NAME;
 
 // -----------------------------------------------------------------------------
 // webpack
