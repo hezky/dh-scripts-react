@@ -29,7 +29,10 @@ module.exports = {
           },
         ],
         exclude: /node_modules/,
-        include: [path.join(pwd, "./devel/")],
+        include: [
+          path.join(pwd, "./devel/"),
+          path.join(pwd, "./src/")
+        ],
         test: /\.(j|t)s(x)?$/,
       },
     ],
