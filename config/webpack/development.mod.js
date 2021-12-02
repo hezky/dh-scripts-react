@@ -31,7 +31,7 @@ module.exports = {
         exclude: /node_modules/,
         include: [
           path.join(pwd, "./devel/"),
-          path.join(pwd, "./src/")
+          path.join(pwd, "./src/js/")
         ],
         test: /\.(j|t)s(x)?$/,
       },
