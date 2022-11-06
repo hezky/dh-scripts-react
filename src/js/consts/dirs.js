@@ -1,7 +1,7 @@
 const ACTUAL_PCKG_NAME = "@dh-scripts/react";
 const CWD = process.cwd();
 
-const isScriptsRun = process.env.npm_package_name === ACTUAL_PCKG_NAME;
+const isScriptsReact = process.env.isScriptsReact;
 
 // -----------------------------------------------------------------------------
 // webpack
@@ -11,7 +11,7 @@ const FILE_WEBPACK_PRODUCTION = "production";
 const DIR_CONFIG_WEBPACK = "config/webpack";
 
 let WEBPACK_CONFIG;
-if (isScriptsRun) {
+if (isScriptsReact) {
   WEBPACK_CONFIG = `${CWD}/${DIR_CONFIG_WEBPACK}`;
 } else {
   // {cwd}/node_modules/{actualPckg}/
@@ -27,7 +27,7 @@ const WEBPACK_CONFIG_PRODUCTION = `${WEBPACK_CONFIG}/${FILE_WEBPACK_PRODUCTION}`
 // static
 const DIR_STATIC = "static";
 let STATIC_INDEX;
-if (isScriptsRun) {
+if (isScriptsReact) {
   // {cwd}/static/index.html
   STATIC_INDEX = `${CWD}/${DIR_STATIC}/index.html`;
 } else {

@@ -9,6 +9,7 @@ const spawnSync = require("child_process").spawnSync;
 const ACTUAL_PCKG = "@dh-scripts/react";
 const IS_SCRIPTS_REACT = process.env.npm_package_name === ACTUAL_PCKG;
 process.env.isScriptsReact = IS_SCRIPTS_REACT;
+process.env.isNpmRun = process.env.npm_package_name !== undefined;
 const apl = (IS_SCRIPTS_REACT && "babel-node") || "node";
 const folder = (IS_SCRIPTS_REACT && "src") || "lib";
 // -----------------------------------------
@@ -74,32 +75,3 @@ console.info("");
 // -----------------------------------------
 
 process.exit(0);
-
-/*
-const script = process.argv[2];
-const args = process.argv.slice(3);
-
-const isScriptsReact = process.env.npm_package_name === "@dh-scripts/react";
-const apl = (isScriptsReact && "babel-node") || "node";
-const folder = (isScriptsReact && "src") || "lib";
-const pathScript = `./../${folder}/js/run/${script}.js`;
-
-console.info(">> ", script, ": start");
-console.info("");
-console.info("--------------------------------------------");
-console.info("");
-console.time(script);
-
-spawnSync(apl, [require.resolve(pathScript)].concat(args), {
-  stdio: "inherit",
-});
-
-console.info("");
-console.info("--------------------------------------------");
-console.info("");
-console.timeEnd(script);
-console.info("");
-console.info(">> ", script, ": end");
-
-process.exit(0);
-*/
