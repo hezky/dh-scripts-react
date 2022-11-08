@@ -12,7 +12,7 @@ const QUESTION = (oldPort) =>
 const START_WITH_OTHER_PORT__PROMPT_PORT_SCHEMA = (port) => ({
   properties: {
     port: {
-      pattern: /^[0-9]+$/,
+      pattern: /^\d+$/,
       message: "Port must be a number",
       required: true,
       default: port,

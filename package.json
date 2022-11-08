@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "@dh-dependency/base": "^0.1.7",
-    "@dh-dependency/react": "^0.0.20",
+    "@dh-dependency/react": "^0.0.21",
     "@dh-scripts/run": "^0.8.12",
     "@hot-loader/react-dom": "17.0.1",
     "babel-loader": "^9.1.0",

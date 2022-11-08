@@ -1,7 +1,6 @@
-var path = require("path");
-var webpack = require("webpack");
-
-var pwd = process.cwd();
+const path = require("path");
+const pwd = process.cwd();
+const webpack = require("webpack");
 
 console.log("config development ...");
 
