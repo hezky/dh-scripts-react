@@ -32,7 +32,7 @@ module.exports = {
           path.join(pwd, "./devel/"),
           path.join(pwd, "./src/js/")
         ],
-        test: /\.(j|t)s(x)?$/,
+        test: /\.([jt])s(x)?$/,
       },
     ],
   },
